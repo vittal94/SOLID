@@ -22,7 +22,7 @@ object BadDesignOfSender {
     }
 
     class Notifier(private val sender: Any) {
-        fun notify() {
+        fun notifying() {
             if (sender is EmailSender) {
                 sender.sendEmail()
             }
@@ -64,7 +64,7 @@ object GoodDesignOfSender {
     }
 
     class Notifier(private val sender: Sender){
-        fun notify() {
+        fun notifying() {
             sender.send()
         }
     }
